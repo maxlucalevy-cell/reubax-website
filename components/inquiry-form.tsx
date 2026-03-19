@@ -79,6 +79,22 @@ export function InquiryForm({
   }, [isBusiness]);
 
   return (
+    <div className="mt-6">
+  <a
+    href={
+      isBusiness
+        ? "PASTE_BUSINESS_FORM_LINK"
+        : "PASTE_PARTNER_FORM_LINK"
+    }
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-white hover:bg-slate-800 transition"
+  >
+    {isBusiness
+      ? "Get matched with an AI partner"
+      : "Apply to join the REUBAX network"}
+  </a>
+</div> 
     <Card className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-[0_12px_32px_rgba(15,23,42,0.05)] md:p-10">
       <div className="max-w-2xl">
         <p className="card-kicker">Inquiry form</p>
