@@ -83,8 +83,8 @@ export function InquiryForm({
   <a
     href={
       isBusiness
-        ? "PASTE_BUSINESS_FORM_LINK"
-        : "PASTE_PARTNER_FORM_LINK"
+        ? "https://5o9e9q.share-na3.hsforms.com/270CSsZuOQJW9cZUGLQALMQ"
+        : "https://5o9e9q.share-na3.hsforms.com/2u7aRggTFRIGrcnRV9VnsQQ" 
     }
     target="_blank"
     rel="noopener noreferrer"
