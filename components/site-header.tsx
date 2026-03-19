@@ -56,8 +56,8 @@ export function SiteHeader() {
   <Image
     src="/logo.png"
     alt="Reubax logo"
-    width={140}
-    height={40}
+    width={160}
+    height={60}
   />
 </Link>
               </div>
