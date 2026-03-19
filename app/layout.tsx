@@ -77,18 +77,19 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.variable} ${fraunces.variable}`}
       suppressHydrationWarning
-    >
-<Script
-  src="//js.hs-scripts.com/34308062.js"
-  strategy="afterInteractive"
-/>
-  ></script> 
+      <body className="min-h-screen font-[family:var(--font-sans)]">
+        <Script
+          src="//js.hs-scripts.com/34308062.js"
+          strategy="afterInteractive"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
         />
+
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1 pt-24">{children}</main>
