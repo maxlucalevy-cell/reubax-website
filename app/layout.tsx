@@ -72,11 +72,12 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  return (
+  return (    
     <html
       lang="en"
       className={`${manrope.variable} ${fraunces.variable}`}
       suppressHydrationWarning
+    >
       <body className="min-h-screen font-[family:var(--font-sans)]">
         <Script
           src="//js.hs-scripts.com/34308062.js"
