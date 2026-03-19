@@ -1,0 +1,81 @@
+import { Building2, BriefcaseBusiness } from "lucide-react";
+
+import type { Metadata } from "next";
+import { InquiryForm } from "@/components/inquiry-form";
+import { MotionSection } from "@/components/motion-section";
+import { PageHero } from "@/components/page-hero";
+import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Speak with REUBAX about an AI implementation requirement or apply to join the partner network.",
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Contact"
+        title="Start the conversation."
+        description="Whether you are seeking an AI implementation partner or applying to join the REUBAX network, choose the route that fits your role."
+      />
+
+      <section className="section-shell pt-8">
+        <MotionSection>
+          <Tabs defaultValue="business" className="mx-auto max-w-5xl">
+            <div className="grid gap-4 md:grid-cols-2">
+              <Card className="grid-card">
+                <div className="flex items-start gap-4">
+                  <Building2 className="mt-1 h-5 w-5 text-cyan-700" />
+                  <div>
+                    <p className="card-kicker">For businesses</p>
+                    <p className="mt-2 text-lg font-semibold text-slate-950">
+                      Seeking an implementation partner
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      Use this route if your company wants help identifying the right consulting firm.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="grid-card">
+                <div className="flex items-start gap-4">
+                  <BriefcaseBusiness className="mt-1 h-5 w-5 text-cyan-700" />
+                  <div>
+                    <p className="card-kicker">For partners</p>
+                    <p className="mt-2 text-lg font-semibold text-slate-950">
+                      Applying to the REUBAX network
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      Use this route if your consulting firm wants to be considered for relevant introductions.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <TabsList className="mt-6 grid w-full grid-cols-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-panel">
+              <TabsTrigger value="business">For businesses</TabsTrigger>
+              <TabsTrigger value="partner">For partners</TabsTrigger>
+            </TabsList>
+            <TabsContent value="business" className="mt-8">
+              <InquiryForm
+                audience="business"
+                title="Business inquiry"
+                description="Use this route if your company is seeking an AI consulting or implementation partner."
+              />
+            </TabsContent>
+            <TabsContent value="partner" className="mt-8">
+              <InquiryForm
+                audience="partner"
+                title="Partner application"
+                description="Use this route if your firm wants to be considered for relevant AI project introductions."
+              />
+            </TabsContent>
+          </Tabs>
+        </MotionSection>
+      </section>
+    </>
+  );
+}

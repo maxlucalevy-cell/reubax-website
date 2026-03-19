@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 42 33% 98%;
+  --foreground: 222 39% 11%;
+  --muted: 35 25% 95%;
+  --muted-foreground: 215 14% 36%;
+  --border: 214 20% 87%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 39% 11%;
+  --primary: 188 84% 33%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 24% 94%;
+  --secondary-foreground: 222 39% 11%;
+  --accent: 40 74% 63%;
+  --accent-foreground: 222 39% 11%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background:
+    linear-gradient(180deg, #fffdfa 0%, #fbfcfd 100%);
+}
+
+::selection {
+  background: rgba(8, 145, 178, 0.18);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight text-slate-950;
+  }
+
+  p {
+    @apply text-slate-600;
+  }
+
+  a {
+    @apply outline-none;
+  }
+
+  strong {
+    @apply font-semibold text-slate-900;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply container relative py-14 md:py-20 lg:py-24;
+  }
+
+  .section-band {
+    @apply relative border-t border-slate-200/80;
+  }
+
+  .section-band::before {
+    @apply pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent content-[''];
+  }
+
+  .section-band > * {
+    @apply relative z-[1];
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-700;
+  }
+
+  .section-title {
+    @apply mt-4 max-w-4xl text-[1.95rem] font-semibold leading-[1.03] md:mt-5 md:text-[3.15rem];
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-2xl text-[1rem] leading-7 text-slate-600 md:mt-5 md:text-[1.1rem] md:leading-8;
+  }
+
+  .grid-card {
+    @apply rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_8px_22px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_14px_30px_rgba(15,23,42,0.06)] md:p-8;
+  }
+
+  .hero-card {
+    @apply rounded-[32px] border border-slate-200 bg-white p-7 shadow-[0_16px_42px_rgba(15,23,42,0.06)] md:p-10;
+  }
+
+  .section-divider {
+    @apply absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent;
+  }
+
+  .metric-chip {
+    @apply inline-flex min-w-[132px] flex-col rounded-[18px] border border-slate-200 bg-white px-4 py-3.5 shadow-[0_4px_14px_rgba(15,23,42,0.03)];
+  }
+
+  .soft-panel {
+    @apply rounded-[30px] border border-slate-200 bg-white shadow-[0_10px_28px_rgba(15,23,42,0.04)];
+  }
+
+  .dark-panel {
+    @apply rounded-[30px] border border-slate-800 bg-slate-950 text-white shadow-[0_18px_48px_rgba(15,23,42,0.16)];
+  }
+
+  .signal-dot {
+    @apply inline-block h-2.5 w-2.5 rounded-full bg-cyan-600;
+  }
+
+  .nav-surface {
+    @apply rounded-full border border-slate-200 bg-white shadow-[0_6px_20px_rgba(15,23,42,0.05)] backdrop-blur-xl;
+  }
+
+  .nav-link {
+    @apply rounded-full px-4 py-2 text-sm font-medium transition duration-200;
+  }
+
+  .card-kicker {
+    @apply text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500;
+  }
+
+  .trust-list {
+    @apply space-y-4;
+  }
+
+  .trust-item {
+    @apply flex gap-3 rounded-[20px] border border-slate-200 bg-white p-4;
+  }
+}

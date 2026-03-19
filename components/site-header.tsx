@@ -1,0 +1,131 @@
+"use client";
+
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { siteNavigation } from "@/lib/site";
+
+export function SiteHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 12);
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 px-4 py-4">
+      <div
+        className={cn(
+          "nav-surface container px-4 py-3 transition-all duration-300 md:px-6",
+          isScrolled && "border-slate-300 bg-white/98 shadow-[0_10px_28px_rgba(15,23,42,0.07)]",
+        )}
+      >
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-sm font-bold tracking-[0.25em] text-white shadow-sm">
+              R
+            </div>
+            <div>
+              <div className="text-sm font-semibold tracking-[0.28em] text-slate-950">
+                REUBAX
+              </div>
+              <div className="text-xs text-slate-500">AI Partner Intermediary</div>
+            </div>
+          </Link>
+
+          <nav className="hidden items-center gap-2 lg:flex">
+            {siteNavigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "nav-link",
+                  pathname === item.href
+                    ? "bg-slate-950 text-white shadow-sm"
+                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-950",
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden lg:block">
+            <Button asChild size="lg">
+              <Link href="/contact">Book a conversation</Link>
+            </Button>
+          </div>
+
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white/75 text-slate-700 transition hover:bg-white lg:hidden"
+            onClick={() => setIsOpen((value) => !value)}
+            aria-label="Toggle navigation"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {isOpen ? (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2 }}
+            className="container mt-4 rounded-[30px] border border-slate-200 bg-white/98 p-4 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur lg:hidden"
+          >
+            <nav className="flex flex-col gap-2">
+              {siteNavigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "rounded-[18px] px-4 py-3 text-sm font-medium transition",
+                    pathname === item.href
+                      ? "bg-slate-950 text-white"
+                      : "text-slate-700 hover:bg-slate-50 hover:text-slate-950",
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Button asChild size="lg" className="mt-3 w-full">
+                <Link href="/contact" onClick={() => setIsOpen(false)}>
+                  Book a conversation
+                </Link>
+              </Button>
+            </nav>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </header>
+  );
+}
