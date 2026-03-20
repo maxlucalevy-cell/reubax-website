@@ -44,7 +44,15 @@ export function SiteFooter() {
             Get Started
           </h2>
           <div className="mt-4 flex flex-col gap-3 text-slate-600">
-            <Link href="/contact">Book a conversation</Link>
+            <Button size="xl" asChild>
+  <a
+    href="https://outlook.office.com/book/REUBAXIntroCall@reubax.ca/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Book a conversation
+  </a>
+</Button>
             <Link href="/contact">Join as a partner</Link>
             <a
   href="mailto:maxlevy@reubax.ca?subject=REUBAX Inquiry&body=Hi Max, I’m interested in learning more about REUBAX."
