@@ -27,7 +27,7 @@ export default function AboutPage() {
             <Card className="grid-card h-full">
               <span className="eyebrow">What We Are</span>
               <h2 className="section-title mt-6 text-3xl md:text-4xl">
-                REUBAX does not build AI solutions. It connects buyers with implementation partners.
+                REUBAX connects businesses with AI implementation partners and vice versa.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8">
                 We work between companies pursuing AI initiatives and
