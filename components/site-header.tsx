@@ -81,7 +81,7 @@ export function SiteHeader() {
 
 <Button size="xl" asChild>
   <a 
-    href='https://outlook.office.com/book/REUBAXIntroCall@reubax.ca/'>Schedule online</a>
+    href='https://outlook.office.com/book/REUBAXIntroCall@reubax.ca/'Schedule online</a> 
     target="_blank"
     rel="noopener noreferrer"
   >
