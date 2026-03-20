@@ -46,7 +46,12 @@ export function SiteFooter() {
           <div className="mt-4 flex flex-col gap-3 text-slate-600">
             <Link href="/contact">Book a conversation</Link>
             <Link href="/contact">Join as a partner</Link>
-            <p>hello@reubax.com</p>
+            <a
+  href="mailto:maxlevy@reubax.ca?subject=REUBAX Inquiry&body=Hi Max, I’m interested in learning more about REUBAX."
+  className="hover:text-slate-900"
+>
+  maxlevy@reubax.ca
+</a> 
           </div>
         </div>
       </div>
