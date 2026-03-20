@@ -99,7 +99,6 @@ export function SiteHeader() {
 </Button>
         </div>
       </div>
-
       <AnimatePresence>
         {isOpen ? (
           <motion.div
