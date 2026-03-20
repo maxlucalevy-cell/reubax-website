@@ -68,12 +68,10 @@ export default function HomePage() {
           <MotionSection className="max-w-3xl">
             <span className="eyebrow">AI Partner Selection</span>
             <h1 className="mt-6 max-w-5xl font-[family:var(--font-display)] text-[3.15rem] leading-[0.92] text-slate-950 md:text-[5.2rem]">
-              A clearer route to the right AI implementation partner.
+              Find the right AI partner for your business.
             </h1>
             <p className="mt-7 max-w-2xl text-[1.05rem] leading-8 text-slate-600 md:text-[1.2rem]">
-              REUBAX is an intermediary that connects companies pursuing AI
-              implementation with vetted consulting partners. We do not build
-              solutions ourselves. We help identify the right firm to do so.
+              At REUBAX we connect you with vetted AI consulting firms that can design and implement your solution.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button size="xl" asChild>
