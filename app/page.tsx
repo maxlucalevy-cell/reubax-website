@@ -23,7 +23,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { homeStats, proofPlaceholders } from "@/lib/site";
-import { faq-section } from "@/components/faq-section"; 
+import { FAQSection } from "@/components/faq-section"; 
 
 export const metadata: Metadata = {
   title: "AI Implementation Partner Selection",
