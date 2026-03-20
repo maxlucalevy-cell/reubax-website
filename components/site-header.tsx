@@ -87,18 +87,16 @@ export function SiteHeader() {
   >
     Book a conversation
   </a>
+<Button asChild size="lg" className="mt-3 w-full">
+  <a
+    href="https://outlook.office365.com/owa/calendar/REUBAXIntroCall@reubax.ca/bookings/"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setIsOpen(false)}
+  >
+    Book a conversation
+  </a>
 </Button>
-          </div>
-
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white/75 text-slate-700 transition hover:bg-white lg:hidden"
-            onClick={() => setIsOpen((value) => !value)}
-            aria-label="Toggle navigation"
-            aria-expanded={isOpen}
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
         </div>
       </div>
 
@@ -128,10 +126,15 @@ export function SiteHeader() {
                 </Link>
               ))}
               <Button asChild size="lg" className="mt-3 w-full">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Book a conversation
-                </Link>
-              </Button>
+  <a
+    href="https://outlook.office365.com/owa/calendar/REUBAXIntroCall@reubax.ca/bookings/"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setIsOpen(false)}
+  >
+    Book a conversation
+  </a>
+</Button>
             </nav>
           </motion.div>
         ) : null}
