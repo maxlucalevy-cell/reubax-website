@@ -18,8 +18,8 @@ export default function ForPartnersPage() {
     <>
       <PageHero
         eyebrow="For Partners"
-        title="Join a network built for relevant introductions."
-        description="REUBAX works with consulting firms that want access to relevant AI implementation opportunities without relying entirely on broad outbound activity."
+        title="Join our network to get your AI out there."
+        description="REUBAX works with hundreds of businesses that want AI implementation without the time consuming research."
       />
 
       <section className="section-shell pt-8">
@@ -29,13 +29,13 @@ export default function ForPartnersPage() {
               icon: TrendingUp,
               title: "Qualified demand",
               description:
-                "Connect with companies actively assessing AI implementation work.",
+                "Connect with companies actively searching for AI implementation.",
             },
             {
               icon: Filter,
               title: "Better-fit opportunities",
               description:
-                "Introductions are shaped by specialization, use case, and delivery fit.",
+                "Introductions are shaped by specialization, consistency, and delivery fit.",
             },
             {
               icon: BriefcaseBusiness,
@@ -47,7 +47,7 @@ export default function ForPartnersPage() {
               icon: Handshake,
               title: "Aligned incentives",
               description:
-                "REUBAX earns when an introduction leads to a selected partner engagement.",
+                "REUBAX earns when an introduction leads to a selected partner agreement.",
             },
           ].map((item) => (
             <MotionSection key={item.title}>
@@ -64,14 +64,14 @@ export default function ForPartnersPage() {
       <section className="section-shell">
         <SectionHeading
           eyebrow="Who We Look For"
-          title="Consulting firms with clear strengths and a credible delivery profile."
+          title=" AI consulting firms with clear strengths and a credibility."
           description="REUBAX is best suited to firms that can define where they add value, what they deliver, and which client situations they fit best."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {[
             "Consulting teams focused on AI implementation and related advisory work.",
             "Firms with demonstrable capability in specific industries or use cases.",
-            "Partners looking for a selective channel for relevant introductions.",
+            "Partners looking to help and accumulate more clients.",
           ].map((item) => (
             <MotionSection key={item}>
               <Card className="grid-card h-full">
