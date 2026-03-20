@@ -79,27 +79,19 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <Button size="xl" asChild>
+<Button size="xl" asChild>
   <a
     href="https://outlook.office365.com/owa/calendar/REUBAXIntroCall@reubax.ca/bookings/"
     target="_blank"
     rel="noopener noreferrer"
-  >
-    Book a conversation
-  </a>
-<Button asChild size="lg" className="mt-3 w-full">
-  <a
-    href="https://outlook.office365.com/owa/calendar/REUBAXIntroCall@reubax.ca/bookings/"
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={() => setIsOpen(false)}
   >
     Book a conversation
   </a>
 </Button>
-        </div>
-      </div>
-      <AnimatePresence>
+</div>
+</div>
+
+<AnimatePresence>
         {isOpen ? (
           <motion.div
             initial={{ opacity: 0, y: -12 }}
