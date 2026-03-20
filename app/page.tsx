@@ -137,9 +137,8 @@ export default function HomePage() {
                     Why REUBAX
                   </div>
                   <p className="mt-3 text-lg leading-7 text-slate-100">
-                    REUBAX sits between AI demand and AI supply, bringing
-                    structure, judgement, and partner fit to the selection
-                    process.
+                    REUBAX connects businesses with the right AI partners 
+                    and makes partner selection faster and more reliable.
                   </p>
                   <div className="mt-5 grid gap-3 text-sm text-slate-300 sm:grid-cols-2">
                     <div className="flex items-center gap-2">
@@ -172,17 +171,17 @@ export default function HomePage() {
             {
               title: "Clear role",
               description:
-                "REUBAX is an intermediary. It does not build or sell implementation services.",
+                "REUBAX connects you with the right AI partner. We focus on matching so you get the best fit for your needs",
             },
             {
               title: "Selective matching",
               description:
-                "Introductions are based on fit, delivery profile, and the specifics of the requirement.",
+                "We carefully match each project with firms based on your companies niche.",
             },
             {
               title: "Two-sided value",
               description:
-                "Companies save time on partner selection. Consulting firms access more relevant demand.",
+                "Businesses find the right partner faster. AI firms get access to high-quality, relevant opportunities.",
             },
           ].map((item) => (
             <MotionSection key={item.title}>
@@ -206,7 +205,7 @@ export default function HomePage() {
             <div>
               <span className="eyebrow">Positioning</span>
               <h2 className="mt-5 max-w-xl text-[2rem] font-semibold leading-[1.04] text-slate-950 md:text-[3rem]">
-                REUBAX is not a builder. It is a partner selection intermediary.
+                REUBAX helps businesses identify and select the right AI partners.
               </h2>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
@@ -215,19 +214,19 @@ export default function HomePage() {
                   icon: FileCheck2,
                   title: "Structured qualification",
                   description:
-                    "Initial conversations focused on business context, scope, and buying intent.",
+                    "We understand your business, your needs, and your goals.",
                 },
                 {
                   icon: Layers3,
                   title: "Specialized matching",
                   description:
-                    "Partner selection based on capability, use case fit, and delivery profile.",
+                    "We match you with the right partner for your use case.",
                 },
                 {
                   icon: BadgeCheck,
                   title: "Commercial clarity",
                   description:
-                    "A more disciplined route into implementation conversations.",
+                    "You move forward with clear and confident decisions.",
                 },
               ].map((item) => (
                 <div
@@ -251,8 +250,8 @@ export default function HomePage() {
       <section className="section-shell pt-8">
         <SectionHeading
           eyebrow="The REUBAX Model"
-          title="An intermediary model designed for better partner decisions."
-          description="REUBAX helps companies approach AI implementation partner selection with more structure and less friction. We assess the opportunity, identify likely-fit firms, and support introductions."
+          title="Better AI partner selection."
+          description="We help businesses find and choose the right AI partners."
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {[
@@ -260,19 +259,19 @@ export default function HomePage() {
               icon: ShieldCheck,
               title: "Vetted partner network",
               description:
-                "Introductions are drawn from consulting firms assessed for quality, specialization, and fit.",
+                "We work with high-quality AI partners.",
             },
             {
               icon: BadgeCheck,
               title: "Independent role",
               description:
-                "REUBAX does not deliver AI projects. Our role is to connect buyers with the right implementation partner.",
+                "We connect you with the right partner.",
             },
             {
               icon: Sparkles,
               title: "Clear process",
               description:
-                "A concise process that improves clarity for both the buyer and the consulting firm.",
+                "Simple steps from need to partner.",
             },
           ].map((item) => (
             <MotionSection key={item.title}>
@@ -288,30 +287,28 @@ export default function HomePage() {
 
       <section id="how-it-works" className="section-shell section-band">
         <SectionHeading
-          eyebrow="How It Works"
-          title="Three steps to a better implementation conversation."
-          description="The process is straightforward: understand the requirement, identify the right firms, and support the introduction."
-        />
+  eyebrow="How It Works"
+  title="From need to partner in 3 steps."
+  description="We understand, match, and connect."
+/>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {[
-            {
-              step: "01",
-              title: "Understand the requirement",
-              description:
-                "We review the business context, the initiative under consideration, and the type of partner required.",
-            },
-            {
-              step: "02",
-              title: "Identify likely-fit firms",
-              description:
-                "We identify consulting partners whose capabilities and delivery approach align with the brief.",
-            },
-            {
-              step: "03",
-              title: "Introduction",
-              description:
-                "We coordinate introductions so both sides enter the discussion with context and a clearer basis for fit.",
-            },
+         [
+  {
+    step: "01",
+    title: "Understand",
+    description: "We learn your goals and requirements.",
+  },
+  {
+    step: "02",
+    title: "Match",
+    description: "We find the right AI partner.",
+  },
+  {
+    step: "03",
+    title: "Connect",
+    description: "We introduce you and get things moving.",
+  },
+]
           ].map((item, index) => (
             <MotionSection key={item.step} delay={index * 0.08}>
               <Card className="grid-card h-full">
@@ -339,7 +336,7 @@ export default function HomePage() {
             <Card className="grid-card h-full">
               <span className="eyebrow">For Businesses</span>
               <h2 className="section-title mt-6 text-3xl md:text-4xl">
-                Find the right firm without running a full market search.
+                Find the right firm without the headache.
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7">
                 If your company is assessing an AI initiative, REUBAX helps
@@ -363,7 +360,7 @@ export default function HomePage() {
             <Card className="grid-card h-full">
               <span className="eyebrow">For AI Partners</span>
               <h2 className="section-title mt-6 text-3xl md:text-4xl">
-                Join a network built for relevant client introductions.
+                Join our network as an AI Partner.
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7">
                 REUBAX works with consulting firms that want access to
@@ -389,8 +386,8 @@ export default function HomePage() {
       <section className="section-shell section-band">
         <SectionHeading
           eyebrow="Use Cases"
-          title="Relevant where partner choice has material consequences."
-          description="REUBAX is suited to companies that want a more deliberate path into AI implementation partner selection."
+          title="Choosing the right AI partner matters."
+          description="We help you get it right."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {useCases.map((useCase, index) => (
@@ -407,9 +404,9 @@ export default function HomePage() {
 
       <section className="section-shell pt-0">
         <SectionHeading
-          eyebrow="Future Evidence"
-          title="Designed to accommodate references, case studies, and outcome proof."
-          description="The structure is in place for future evidence without disrupting the site hierarchy or the core messaging."
+          eyebrow="Proof"
+          title="Proven results are coming"
+          description="We’re building a network of successful AI engagements."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {proofPlaceholders.map((item, index) => (
