@@ -79,10 +79,15 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button asChild size="lg">
-              <Link href="/contact">Book a conversation</Link>
-            </Button>
+          <Button size="xl" asChild>
+  <a
+    href="https://outlook.office365.com/owa/calendar/REUBAXIntroCall@reubax.ca/bookings/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Book a conversation
+  </a>
+</Button>
           </div>
 
           <button
