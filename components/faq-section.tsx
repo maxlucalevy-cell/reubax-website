@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Image from "next/image"
 
 const faqItems = [
   {
@@ -133,6 +134,15 @@ export function FAQSection() {
     Book a conversation
   </a>
 </Button>
+              <div className="flex items-center justify-center">
+  <Image
+    src="/icon.png"
+    alt="REUBAX logo"
+    width={400}
+    height={400}
+    className="object-contain max-w-[320px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
+  />
+</div>
               <Link
                 href="mailto:maxlevy@reubax.ca"
                 className="text-sm font-medium text-slate-800 underline underline-offset-4 transition hover:text-white"
