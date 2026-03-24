@@ -112,13 +112,13 @@ export function FAQSection() {
 
         <MotionSection delay={0.08}>
           <Card className="dark-panel h-full p-8 md:p-10">
-            <span className="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
+            <span className="inline-flex items-center rounded-full border border-slate-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-700">
               Still have questions?
             </span>
             <h3 className="mt-6 max-w-sm text-[2rem] font-semibold leading-[1.05] text-white">
               Get a clear answer from the REUBAX team
             </h3>
-            <p className="mt-4 max-w-md text-[1rem] leading-7 text-slate-100">
+            <p className="mt-4 max-w-md text-[1rem] leading-7 text-slate-700">
               If you&apos;re evaluating AI implementation and want help choosing the
               right partner, we can help.
             </p>
@@ -129,7 +129,7 @@ export function FAQSection() {
               </Button>
               <Link
                 href="mailto:maxlevy@reubax.ca"
-                className="text-sm font-medium text-slate-100 underline underline-offset-4 transition hover:text-white"
+                className="text-sm font-medium text-slate-800 underline underline-offset-4 transition hover:text-white"
               >
                 Email maxlevy@reubax.ca
               </Link>
