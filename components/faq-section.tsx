@@ -125,8 +125,14 @@ export function FAQSection() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row xl:flex-col xl:items-start">
               <Button size="xl" asChild>
-                <Link href="/contact">Book a conversation</Link>
-              </Button>
+  <a
+    href="https://outlook.office.com/book/REUBAXIntroCall@reubax.ca/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Book a conversation
+  </a>
+</Button>
               <Link
                 href="mailto:maxlevy@reubax.ca"
                 className="text-sm font-medium text-slate-800 underline underline-offset-4 transition hover:text-white"
