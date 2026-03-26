@@ -23,17 +23,38 @@ function ContactPageContent() {
     }
     
 if (type) {
+if (type) {
   requestAnimationFrame(() => {
     const el = document.getElementById("form-section");
     if (!el) return;
 
-    el.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const targetPosition = el.offsetTop - 100;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 1400; // 🔥 adjust this (1200–1600 is sweet spot)
+
+    let startTime: number | null = null;
+
+    function animation(currentTime: number) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+
+      const progress = Math.min(timeElapsed / duration, 1);
+
+      // 👇 LINEAR (no easing = smooth constant speed)
+      window.scrollTo(
+        0,
+        startPosition + distance * progress
+      );
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
   });
 }
-}, [type]);
 
   return (
     <>
