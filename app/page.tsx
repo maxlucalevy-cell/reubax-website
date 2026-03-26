@@ -118,7 +118,7 @@ export default function HomePage() {
                   </p>
                   <Link
   href="/contact?type=business"
-  className="mt-6 inline-flex items-center justify-center rounded-full bg-black text-white px-10 py-5 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-slate-900"
+  className="mt-6 inline-flex items-center justify-center rounded-full bg-black text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-slate-900 hover:shadow-md hover:shadow-xl"
 >
   For Businesses
 </Link>
@@ -139,7 +139,7 @@ export default function HomePage() {
                   </p>
                   <Link
   href="/contact?type=partner"
- className="mt-6 inline-flex items-center justify-center rounded-full bg-black text-white px-10 py-5 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-slate-900"
+ className="mt-6 inline-flex items-center justify-center rounded-full bg-black text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:bg-slate-900 hover:shadow-md hover:shadow-xl"
   > 
   For Partners
 </Link>
