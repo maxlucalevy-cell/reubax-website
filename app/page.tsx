@@ -116,6 +116,12 @@ export default function HomePage() {
                     Clarify the brief, reduce selection risk, and meet firms
                     suited to the work.
                   </p>
+                  <Link
+  href="/contact?type=business"
+  className="mt-4 inline-flex items-center justify-center rounded-full bg-black px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+>
+  For Businesses
+</Link>
                 </div>
                 <div className="rounded-[24px] border border-slate-200 bg-white p-5 md:p-6">
                   <div className="flex items-center justify-between">
@@ -131,6 +137,12 @@ export default function HomePage() {
                     Join a selected network positioned for relevant project
                     introductions.
                   </p>
+                  <Link
+  href="/contact?type=partner"
+  className="mt-4 inline-flex items-center justify-center rounded-full bg-black px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+>
+  For Partners
+</Link>
                 </div>
                 <div className="rounded-[24px] border border-slate-900 bg-slate-950 p-6 text-white md:p-7">
                   <div className="flex items-center gap-2 text-sm uppercase tracking-[0.22em] text-cyan-200">
