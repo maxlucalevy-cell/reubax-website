@@ -31,7 +31,7 @@ if (type) {
     const targetPosition = el.offsetTop - 100;
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    const duration = 1400; // 🔥 adjust this (1200–1600 is sweet spot)
+    const duration = 1400; 
 
     let startTime: number | null = null;
 
@@ -41,7 +41,6 @@ if (type) {
 
       const progress = Math.min(timeElapsed / duration, 1);
 
-      // 👇 LINEAR (no easing = smooth constant speed)
       window.scrollTo(
         0,
         startPosition + distance * progress
