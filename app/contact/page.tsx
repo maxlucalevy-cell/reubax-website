@@ -68,34 +68,37 @@ return (
           onValueChange={(value) => setActiveTab(value as "business" | "partner")}
           className="mx-auto max-w-5xl"
         >
-                <div className="flex items-start gap-4">
-                  <Building2 className="mt-1 h-5 w-5 text-cyan-700" />
-                  <div>
-                    <p className="card-kicker">For businesses</p>
-                    <p className="mt-2 text-lg font-semibold text-slate-950">
-                      Seeking an implementation partner
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Use this route if your company wants help identifying the right consulting firm.
-                    </p>
-                  </div>
-                </div>
-             </Card>
-<Card className="grid-card">
-  <div className="flex items-start gap-4">
-    <BriefcaseBusiness className="mt-1 h-5 w-5 text-cyan-700" />
-    <div>
-      <p className="card-kicker">For partners</p>
-      <p className="mt-2 text-lg font-semibold text-slate-950">
-        Applying to the REUBAX network
-      </p>
-      <p className="mt-2 text-sm leading-6 text-slate-600">
-        Use this route if your consulting firm wants to be considered for relevant introductions.
-      </p>
+<div className="grid gap-4 md:grid-cols-2">
+  <Card className="grid-card">
+    <div className="flex items-start gap-4">
+      <Building2 className="mt-1 h-5 w-5 text-cyan-700" />
+      <div>
+        <p className="card-kicker">For businesses</p>
+        <p className="mt-2 text-lg font-semibold text-slate-950">
+          Seeking an implementation partner
+        </p>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Use this route if your company wants help identifying the right consulting firm.
+        </p>
+      </div>
     </div>
-  </div>
-</Card>
-            </div>
+  </Card>
+
+  <Card className="grid-card">
+    <div className="flex items-start gap-4">
+      <BriefcaseBusiness className="mt-1 h-5 w-5 text-cyan-700" />
+      <div>
+        <p className="card-kicker">For partners</p>
+        <p className="mt-2 text-lg font-semibold text-slate-950">
+          Applying to the REUBAX network
+        </p>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Use this route if your consulting firm wants to be considered for relevant introductions.
+        </p>
+      </div>
+    </div>
+  </Card>
+</div>
             <TabsList className="mt-6 grid w-full grid-cols-2 rounded-2xl border border-slate-200 bg-white p-2 shadow-panel">
               <TabsTrigger value="business">For businesses</TabsTrigger>
               <TabsTrigger value="partner">For partners</TabsTrigger>
