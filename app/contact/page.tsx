@@ -23,7 +23,6 @@ function ContactPageContent() {
     }
     
 if (type) {
-if (type) {
   requestAnimationFrame(() => {
     const el = document.getElementById("form-section");
     if (!el) return;
