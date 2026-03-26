@@ -41,7 +41,7 @@ export default function ForBusinessesPage() {
               icon: Target,
               title: "Improve partner fit",
               description:
-                "Meet firms aligned to the use case, constraints, and level of execution required.",
+                "Meet firms aligned to your needs, constraints, and niche.",
             },
             {
               icon: Building2,
