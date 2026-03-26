@@ -1,7 +1,6 @@
 "use client";
 
 import { Building2, BriefcaseBusiness } from "lucide-react";
-import type { Metadata } from "next";
 import { useSearchParams } from "next/navigation";
 import { InquiryForm } from "@/components/inquiry-form";
 import { MotionSection } from "@/components/motion-section";
@@ -9,12 +8,6 @@ import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Speak with REUBAX about an AI implementation requirement or apply to join the partner network.",
-};
 
 export default function ContactPage() {
   const searchParams = useSearchParams();
